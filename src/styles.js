@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-//npm i styled-reset
 import reset from "styled-reset";
 
 export const lightTheme = {
