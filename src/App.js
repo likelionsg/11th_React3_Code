@@ -10,12 +10,12 @@ import styled from "styled-components";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const [id, setId] = useState("");
+  // const [id, setId] = useState("");
 
-  const changeId = (e) => {
-    console.log(e.target.value);
-    console.log(id.length);
-  };
+  // const changeId = (e) => {
+  //   console.log(e.target.value);
+  //   console.log(id.length);
+  // };
 
   return (
     <>
@@ -36,10 +36,10 @@ const App = () => {
             </Routes>
             {/* styled components 예시 */}
 
-            <Example active={email.length}>
+            {/* <Example active={email.length}>
               <Button>Hello</Button>
               <NewButton color="blue">Im new Button</NewButton>
-            </Example>
+            </Example> */}
           </Main>
         </MediaDiv>
         {/* Footer */}
@@ -51,23 +51,23 @@ const App = () => {
 
 export default App;
 
-const Example = styled.div`
-  background: ${({ active }) => {
-    if (active) {
-      return "white";
-    }
-    return "#eee";
-  }};
-  color: black;
-`;
+// const Example = styled.div`
+//   background: ${({ active }) => {
+//     if (active) {
+//       return "white";
+//     }
+//     return "#eee";
+//   }};
+//   color: black;
+// `;
 
-const Button = styled.button`
-  width: 200px;
-  padding: 30px;
-`;
+// const Button = styled.button`
+//   width: 200px;
+//   padding: 30px;
+// `;
 
-// Button 컴포넌트 상속
-const NewButton = styled.Button`
-  // NewButton 컴포넌트에 color가는 props가 있으면 그 값 사용, 없으면 'red' 사용
-  color: ${(props) => props.color || "red"};
-`;
+// // Button 컴포넌트 상속
+// const NewButton = styled.Button`
+//   // NewButton 컴포넌트에 color가는 props가 있으면 그 값 사용, 없으면 'red' 사용
+//   color: ${(props) => props.color || "red"};
+// `;
