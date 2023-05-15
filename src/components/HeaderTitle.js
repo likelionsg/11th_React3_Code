@@ -1,10 +1,10 @@
 import React from "react";
 import { TitleBig, TitleSmall, TitleLogoDiv } from "../styledComponents";
 
-const HeaderTitle = () => {
+const HeaderTitle = ({ goHome }) => {
   return (
     <>
-      <TitleLogoDiv>
+      <TitleLogoDiv onClick={goHome}>
         <TitleBig>멋사</TitleBig>
         <TitleSmall>익명게시판</TitleSmall>
       </TitleLogoDiv>

@@ -10,6 +10,7 @@ export const MediaDiv = styled.div`
     width: 100%;
   }
 `;
+
 export const HeaderDiv = styled.div`
   width: 768px;
   height: auto;
