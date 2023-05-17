@@ -8,6 +8,10 @@ import { darkTheme, GlobalStyles, lightTheme } from "./styles";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 
+import Temp from "./Temp";
+import ShowPostList from "./components/ShowPostList";
+import ShowPost from "./components/ShowPost";
+
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
   // const [id, setId] = useState("");
@@ -28,11 +32,13 @@ const App = () => {
           <Main>
             {/* Slogan */}
             <Slogan />
+
+            {/* <Temp /> */}
             {/* Routes */}
             <Routes>
-              <Route path="/" element={<div>메인 페이지</div>} />
+              <Route path="/" element={<ShowPostList />} />
               <Route path="/write" element={<div>글 작성 페이지</div>} />
-              <Route path="/post/:postID" element={<div>글 상세 페이지</div>} />
+              <Route path="/post/:postID" element={<ShowPost />} />
             </Routes>
             {/* styled components 예시 */}
 
