@@ -11,15 +11,12 @@ import styled from "styled-components";
 import Temp from "./Temp";
 import ShowPostList from "./components/ShowPostList";
 import ShowPost from "./components/ShowPost";
+import WritePost from "./components/WritePost";
+
+export const APIURL = process.env.REACT_APP_APIURL;
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
-  // const [id, setId] = useState("");
-
-  // const changeId = (e) => {
-  //   console.log(e.target.value);
-  //   console.log(id.length);
-  // };
 
   return (
     <>
@@ -33,19 +30,13 @@ const App = () => {
             {/* Slogan */}
             <Slogan />
 
-            {/* <Temp /> */}
+            <Temp />
             {/* Routes */}
             <Routes>
               <Route path="/" element={<ShowPostList />} />
-              <Route path="/write" element={<div>글 작성 페이지</div>} />
+              <Route path="/write" element={<WritePost />} />
               <Route path="/post/:postID" element={<ShowPost />} />
             </Routes>
-            {/* styled components 예시 */}
-
-            {/* <Example active={email.length}>
-              <Button>Hello</Button>
-              <NewButton color="blue">Im new Button</NewButton>
-            </Example> */}
           </Main>
         </MediaDiv>
         {/* Footer */}
@@ -56,24 +47,3 @@ const App = () => {
 };
 
 export default App;
-
-// const Example = styled.div`
-//   background: ${({ active }) => {
-//     if (active) {
-//       return "white";
-//     }
-//     return "#eee";
-//   }};
-//   color: black;
-// `;
-
-// const Button = styled.button`
-//   width: 200px;
-//   padding: 30px;
-// `;
-
-// // Button 컴포넌트 상속
-// const NewButton = styled.Button`
-//   // NewButton 컴포넌트에 color가는 props가 있으면 그 값 사용, 없으면 'red' 사용
-//   color: ${(props) => props.color || "red"};
-// `;
